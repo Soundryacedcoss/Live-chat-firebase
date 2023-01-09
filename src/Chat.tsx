@@ -1,4 +1,4 @@
-import React, { useEffect, useState ,useRef} from "react";
+import React, { useEffect, useState } from "react";
 import { db1 } from "./Firebase";
 import { auth } from "./Firebase";
 import { SignOut } from "./SignOut";
@@ -8,7 +8,6 @@ export const Chat = () => {
   auth.currentUser as null
   // State for store massage
   const [massages, setMassages] = useState([]);
-
   useEffect(() => {
     db1
       .collection("chats")
@@ -33,9 +32,9 @@ export const Chat = () => {
           ))}
         </div>
         <div>
-          <SendMassage/>
+          <SendMassage />
         </div>
-      
+
       </div>
     </div>
   );
